@@ -82,7 +82,7 @@ const BookingWidget = () => {
       `*Queixa:* ${formData.question}\n\n` +
       `Gostaria de confirmar a disponibilidade.`;
 
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/5519996555802?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -309,7 +309,7 @@ const BookingWidget = () => {
                   WhatsApp
                 </label>
                 <Input
-                  placeholder="(11) 99999-9999"
+                  placeholder="(19) 99655-5802"
                   value={formData.whatsapp}
                   onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
                   className="bg-background"
