@@ -10,7 +10,7 @@ const HeroSection = () => {
                 <img
                     src={heroImage}
                     alt="Pele radiante e saudável"
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-[80%_center] md:object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-cream/90 via-cream/70 to-transparent" />
             </div>
