@@ -21,7 +21,7 @@ const HeroSection = () => {
 
             {/* Content */}
             <div className="container relative z-10 mx-auto px-6 py-20 md:py-32">
-                <div className="max-w-2xl">
+                <div className="max-w-2xl bg-white/40 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-white/20 shadow-sm">
                     <motion.span
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ const HeroSection = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.5 }}
-                        className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-lg"
+                        className="text-lg md:text-xl text-foreground/80 leading-relaxed mb-8 max-w-lg font-medium"
                     >
                         Protocolos personalizados e tecnologias de última geração para realçar sua beleza natural com sutileza e elegância.
                     </motion.p>
@@ -56,10 +56,10 @@ const HeroSection = () => {
                         transition={{ duration: 0.8, delay: 0.7 }}
                         className="flex flex-col sm:flex-row gap-4"
                     >
-                        <Button variant="gold" size="lg" className="rounded-full h-12 px-8" id="btn-agendamento-hero" asChild>
+                        <Button variant="gold" size="lg" className="rounded-full h-12 px-6" id="btn-agendamento-hero" asChild>
                             <a href="#agendamento">Quero agendar minha avaliação</a>
                         </Button>
-                        <Button variant="outline" size="lg" className="rounded-full h-12 px-8" asChild>
+                        <Button variant="outline" size="lg" className="rounded-full h-12 px-6 bg-white/50 hover:bg-white/80" asChild>
                             <a href="#tratamentos">Conhecer tratamentos</a>
                         </Button>
                     </motion.div>
