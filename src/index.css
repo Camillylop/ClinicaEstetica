@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+
+/* Premium Aesthetics Clinic Design System
+   Clean Girl aesthetic with luxurious touches
+   All colors in HSL format */
+
+@layer base {
+  :root {
+    /* Core palette - Warm neutrals */
+    --background: 40 33% 96%; /* Cream #FAF7F2 */
+    --foreground: 30 15% 25%; /* Deep brown text */
+
+    --card: 35 30% 92%; /* Sand beige #E8DED1 */
+    --card-foreground: 30 15% 25%;
+
+    --popover: 40 33% 96%;
+    --popover-foreground: 30 15% 25%;
+
+    /* Primary - Gold accent */
+    --primary: 33 35% 58%; /* Matte gold #B8966F */
+    --primary-foreground: 40 33% 98%;
+
+    /* Secondary - Bronze */
+    --secondary: 30 25% 44%; /* Bronze #8B7355 */
+    --secondary-foreground: 40 33% 98%;
+
+    --muted: 35 20% 88%;
+    --muted-foreground: 30 10% 45%;
+
+    --accent: 35 30% 92%;
+    --accent-foreground: 30 15% 25%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 25% 85%;
+    --input: 35 25% 85%;
+    --ring: 33 35% 58%;
+
+    --radius: 0.5rem;
+
+    /* Custom tokens */
+    --gold: 33 35% 58%;
+    --gold-light: 35 40% 75%;
+    --bronze: 30 25% 44%;
+    --sand: 35 30% 92%;
+    --cream: 40 33% 96%;
+    --warm-gray: 30 10% 55%;
+
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(33, 35%, 58%), hsl(35, 40%, 68%));
+    --gradient-sand: linear-gradient(180deg, hsl(40, 33%, 96%), hsl(35, 30%, 92%));
+    --gradient-overlay: linear-gradient(180deg, transparent 0%, hsla(30, 15%, 15%, 0.6) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsla(30, 25%, 30%, 0.12);
+    --shadow-card: 0 8px 30px -8px hsla(30, 25%, 30%, 0.15);
+    --shadow-elevated: 0 20px 50px -12px hsla(30, 25%, 30%, 0.2);
+    --shadow-gold: 0 8px 25px -8px hsla(33, 35%, 58%, 0.35);
+
+    /* Sidebar (keeping for compatibility) */
+    --sidebar-background: 35 30% 92%;
+    --sidebar-foreground: 30 15% 25%;
+    --sidebar-primary: 33 35% 58%;
+    --sidebar-primary-foreground: 40 33% 98%;
+    --sidebar-accent: 35 25% 88%;
+    --sidebar-accent-foreground: 30 15% 25%;
+    --sidebar-border: 35 25% 85%;
+    --sidebar-ring: 33 35% 58%;
+  }
+
+  .dark {
+    --background: 30 15% 12%;
+    --foreground: 40 25% 92%;
+
+    --card: 30 12% 16%;
+    --card-foreground: 40 25% 92%;
+
+    --popover: 30 12% 16%;
+    --popover-foreground: 40 25% 92%;
+
+    --primary: 33 40% 62%;
+    --primary-foreground: 30 15% 12%;
+
+    --secondary: 30 20% 28%;
+    --secondary-foreground: 40 25% 92%;
+
+    --muted: 30 12% 22%;
+    --muted-foreground: 35 15% 60%;
+
+    --accent: 30 12% 22%;
+    --accent-foreground: 40 25% 92%;
+
+    --destructive: 0 55% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 12% 22%;
+    --input: 30 12% 22%;
+    --ring: 33 40% 62%;
+
+    --gold: 33 40% 62%;
+    --gold-light: 35 35% 70%;
+    --bronze: 30 20% 50%;
+    --sand: 30 12% 22%;
+    --cream: 30 15% 12%;
+    --warm-gray: 35 10% 55%;
+
+    --sidebar-background: 30 12% 14%;
+    --sidebar-foreground: 40 25% 92%;
+    --sidebar-primary: 33 40% 62%;
+    --sidebar-primary-foreground: 30 15% 12%;
+    --sidebar-accent: 30 12% 20%;
+    --sidebar-accent-foreground: 40 25% 92%;
+    --sidebar-border: 30 12% 22%;
+    --sidebar-ring: 33 40% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-gold);
+  }
+
+  .bg-gradient-gold {
+    background-image: var(--gradient-gold);
+  }
+
+  .bg-gradient-sand {
+    background-image: var(--gradient-sand);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+}
