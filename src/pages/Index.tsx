@@ -8,7 +8,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import MobileBookingBar from "@/components/MobileBookingBar";
+
 
 const Index = () => {
   return (
@@ -25,7 +25,7 @@ const Index = () => {
       </main>
       <Footer />
       <WhatsAppButton />
-      <MobileBookingBar />
+
     </div>
   );
 };

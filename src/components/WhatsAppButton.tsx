@@ -16,11 +16,11 @@ const WhatsAppButton = () => {
       transition={{ delay: 1.5, type: "spring", stiffness: 200 }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="fixed bottom-24 md:bottom-6 right-6 z-50 flex items-center gap-3 pr-6 pl-4 py-3 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl transition-shadow group"
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-2 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl transition-shadow group"
       aria-label="Abrir WhatsApp"
     >
       <MessageCircle size={24} fill="currentColor" />
-      <span className="font-medium">Fale Conosco</span>
+      <span className="text-sm font-medium">Fale Conosco</span>
     </motion.button>
   );
 };

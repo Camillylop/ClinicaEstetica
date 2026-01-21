@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import MobileBookingBar from "@/components/MobileBookingBar";
+
 import heroImage from "@/assets/hero-spa.jpg";
 import treatmentBody from "@/assets/treatment-body.jpg";
 import treatmentFacial from "@/assets/treatment-facial.jpg";
@@ -214,7 +214,7 @@ const TreatmentDetail = () => {
 
             <Footer />
             <WhatsAppButton />
-            <MobileBookingBar />
+
         </div>
     );
 };
