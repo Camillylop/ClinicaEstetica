@@ -1,13 +1,38 @@
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-// ... existing imports
-
 const Header = () => {
-  // ... existing code
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { label: "Tratamentos", href: "#tratamentos" },
+    { label: "Sobre", href: "#sobre" },
+    { label: "Depoimentos", href: "#depoimentos" },
+    { label: "FAQ", href: "#faq" },
+    { label: "Contato", href: "#contato" },
+  ];
 
   return (
     <motion.header
-    // ... existing props
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+        ? "bg-cream/95 backdrop-blur-md shadow-soft"
+        : "bg-transparent"
+        }`}
     >
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
