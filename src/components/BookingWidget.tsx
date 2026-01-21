@@ -160,12 +160,12 @@ const BookingWidget = () => {
                   className={cn(
                     "p-5 rounded-xl border-2 text-left transition-all duration-300",
                     selectedArea === area.id
-                      ? "border-primary bg-primary/5 shadow-soft"
-                      : "border-border hover:border-primary/50"
+                      ? "border-primary bg-gold/10 shadow-md"
+                      : "border-input hover:border-primary/50 hover:bg-accent/5"
                   )}
                 >
                   <span className="font-serif text-lg text-foreground">{area.label}</span>
-                  <p className="text-sm text-muted-foreground mt-1">{area.description}</p>
+                  <p className="text-sm text-foreground/70 mt-1 font-medium">{area.description}</p>
                 </button>
               ))}
             </div>
@@ -186,8 +186,8 @@ const BookingWidget = () => {
                   className={cn(
                     "p-4 rounded-xl border-2 text-left transition-all duration-300",
                     selectedProcedure === procedure.id
-                      ? "border-primary bg-primary/5 shadow-soft"
-                      : "border-border hover:border-primary/50"
+                      ? "border-primary bg-gold/10 shadow-md"
+                      : "border-input hover:border-primary/50 hover:bg-accent/5"
                   )}
                 >
                   <span className="font-medium text-foreground">{procedure.name}</span>
@@ -211,8 +211,8 @@ const BookingWidget = () => {
                   className={cn(
                     "p-5 rounded-xl border-2 text-left transition-all duration-300",
                     selectedProfessional === prof.id
-                      ? "border-primary bg-primary/5 shadow-soft"
-                      : "border-border hover:border-primary/50"
+                      ? "border-primary bg-gold/10 shadow-md"
+                      : "border-input hover:border-primary/50 hover:bg-accent/5"
                   )}
                 >
                   <span className="font-serif text-lg text-foreground">{prof.name}</span>
@@ -272,8 +272,8 @@ const BookingWidget = () => {
                         className={cn(
                           "py-3 px-2 rounded-lg text-sm font-medium transition-all duration-200 touch-manipulation",
                           selectedTime === time
-                            ? "bg-gradient-gold text-cream shadow-gold"
-                            : "bg-muted hover:bg-primary/10 text-foreground"
+                            ? "bg-primary text-primary-foreground shadow-md scale-105"
+                            : "bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-input"
                         )}
                       >
                         {time}
@@ -352,7 +352,7 @@ const BookingWidget = () => {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mt-4">
             Reserve seu momento
           </h2>
-          <p className="text-muted-foreground mt-4 max-w-lg mx-auto">
+          <p className="text-foreground/80 mt-4 max-w-lg mx-auto font-medium">
             Escolha o procedimento e o melhor horário para você. Nossa equipe entrará em contato para confirmar sua reserva.
           </p>
         </motion.div>
@@ -362,7 +362,7 @@ const BookingWidget = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-2xl mx-auto bg-card rounded-3xl p-8 md:p-12 shadow-card"
+          className="max-w-2xl mx-auto bg-card rounded-3xl p-8 md:p-12 shadow-2xl border border-border/50"
         >
           {renderStepIndicator()}
 
