@@ -1,17 +1,21 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-new.png";
+import heroMobile from "@/assets/hero-mobile.png";
 
 const HeroSection = () => {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0">
-                <img
-                    src={heroImage}
-                    alt="Pele radiante e saudável"
-                    className="w-full h-full object-cover object-[80%_center] md:object-center"
-                />
+                <picture>
+                    <source media="(max-width: 768px)" srcSet={heroMobile} />
+                    <img
+                        src={heroImage}
+                        alt="Pele radiante e saudável"
+                        className="w-full h-full object-cover object-center"
+                    />
+                </picture>
                 <div className="absolute inset-0 bg-gradient-to-r from-cream/90 via-cream/70 to-transparent" />
             </div>
 
