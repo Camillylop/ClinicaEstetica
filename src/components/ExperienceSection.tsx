@@ -30,9 +30,7 @@ const ExperienceSection = () => {
             Um refúgio de autocuidado
           </h2>
           <p className="text-lg text-cream/80 leading-relaxed mb-8">
-            Nosso espaço foi cuidadosamente projetado para proporcionar uma experiência sensorial completa.
-            Cada detalhe, desde a iluminação suave até os aromas delicados, foi pensado para que você
-            se sinta acolhida e segura em sua jornada de transformação.
+            Nosso espaço foi cuidadosamente projetado para proporcionar uma experiência sensorial completa. Cada detalhe, desde a iluminação suave até os aromas delicados, foi pensado para que você se sinta acolhida e segura em sua jornada de transformação.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.a
