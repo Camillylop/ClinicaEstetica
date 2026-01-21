@@ -1,83 +1,82 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Calendar, List, Sparkles, UserRound, Leaf } from "lucide-react";
 import heroImage from "@/assets/hero-new.png";
 
 const HeroSection = () => {
     return (
-        <section className="relative min-h-screen flex items-center overflow-hidden bg-background pt-20">
-            <div className="container mx-auto px-6">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0">
+                <img
+                    src={heroImage}
+                    alt="Pele radiante e saudável"
+                    className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-cream/90 via-cream/70 to-transparent" />
+            </div>
 
-                    {/* Left Side - Text */}
-                    <div className="max-w-2xl relative z-10">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium leading-tight text-foreground mb-6">
-                                Sua Melhor Versão Começa Aqui: <span className="text-primary italic">Ciência e Beleza em Harmonia</span>
-                            </h1>
+            {/* Content */}
+            <div className="container relative z-10 mx-auto px-6 py-20 md:py-32">
+                <div className="max-w-2xl">
+                    <motion.span
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="inline-block text-sm font-medium tracking-[0.2em] text-primary uppercase mb-4"
+                    >
+                        Clínica de Estética Avançada
+                    </motion.span>
 
-                            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                                Protocolos personalizados e tecnologia de ponta para resultados naturais e elegantes.
-                            </p>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                        className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium leading-tight text-foreground mb-6"
+                    >
+                        Onde a ciência encontra a sua{" "}
+                        <span className="italic text-primary">melhor versão</span>
+                    </motion.h1>
 
-                            {/* Feature Icons */}
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
-                                <div className="flex flex-col items-center sm:items-start gap-2 text-center sm:text-left">
-                                    <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-primary">
-                                        <Sparkles size={24} />
-                                    </div>
-                                    <span className="font-medium text-foreground text-sm">Tecnologia Avançada</span>
-                                </div>
+                    <motion.p
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.5 }}
+                        className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-lg"
+                    >
+                        Protocolos personalizados e tecnologias de última geração para realçar sua beleza natural com sutileza e elegância.
+                    </motion.p>
 
-                                <div className="flex flex-col items-center sm:items-start gap-2 text-center sm:text-left">
-                                    <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-primary">
-                                        <UserRound size={24} />
-                                    </div>
-                                    <span className="font-medium text-foreground text-sm">Atendimento Personalizado</span>
-                                </div>
-
-                                <div className="flex flex-col items-center sm:items-start gap-2 text-center sm:text-left">
-                                    <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-primary">
-                                        <Leaf size={24} />
-                                    </div>
-                                    <span className="font-medium text-foreground text-sm">Resultados Naturais</span>
-                                </div>
-                            </div>
-
-                            {/* Buttons */}
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
-                                <Button variant="gold" size="lg" className="gap-2 h-12 rounded-full" asChild>
-                                    <a href="#agendamento">
-                                        <Calendar size={20} />
-                                        Agende Sua Avaliação
-                                    </a>
-                                </Button>
-                                <Button variant="outline" size="lg" className="gap-2 h-12 rounded-full" asChild>
-                                    <a href="#tratamentos">
-                                        <List size={20} />
-                                        Conheça Nossos Tratamentos
-                                    </a>
-                                </Button>
-                            </div>
-                        </motion.div>
-                    </div>
-
-                    {/* Right Side - Image */}
-                    <div className="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
-                        <img
-                            src={heroImage}
-                            alt="Mulher com pele radiante"
-                            className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                    </div>
-
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.7 }}
+                        className="flex flex-col sm:flex-row gap-4"
+                    >
+                        <Button variant="gold" size="lg" className="rounded-full h-12 px-8" id="btn-agendamento-hero" asChild>
+                            <a href="#agendamento">Quero agendar minha avaliação</a>
+                        </Button>
+                        <Button variant="outline" size="lg" className="rounded-full h-12 px-8" asChild>
+                            <a href="#tratamentos">Conhecer tratamentos</a>
+                        </Button>
+                    </motion.div>
                 </div>
             </div>
+
+            {/* Scroll Indicator */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2, duration: 0.8 }}
+                className="absolute bottom-8 left-1/2 -translate-x-1/2"
+            >
+                <motion.div
+                    animate={{ y: [0, 10, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                    className="w-6 h-10 rounded-full border-2 border-primary/30 flex items-start justify-center p-2"
+                >
+                    <motion.div className="w-1 h-2 rounded-full bg-primary" />
+                </motion.div>
+            </motion.div>
         </section>
     );
 };
